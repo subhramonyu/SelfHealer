@@ -1,0 +1,192 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.GL.client</groupId>
+	<artifactId>AutoHelaer2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<properties>
+		<!-- General properties -->
+		<java-compliler.version>1.8</java-compliler.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<aspectjweaver>1.9.1</aspectjweaver>
+
+		<!-- Rest Assured properties -->
+		<rest.assured>3.3.0</rest.assured>
+		<json.schema.validator>4.0.0</json.schema.validator>
+		<jackson.databind>2.9.9</jackson.databind>
+		<json.path>3.3.0</json.path>
+
+
+		<!-- TestNg properties -->
+		<testng.version>7.3.0</testng.version>
+
+		<!-- Maven properties -->
+		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+
+		<!-- Allure properties -->
+		<allure.testng>2.13.3</allure.testng>
+		<allure.environment.writer>1.0.0</allure.environment.writer>
+
+		<!-- Log4J properties -->
+		<log4j.version>1.2.17</log4j.version>
+		<log4j-core.version>2.11.1</log4j-core.version>
+		<slf4j.jdk14>1.7.25</slf4j.jdk14>
+
+
+		<!-- Extentreports properties -->
+		<extentreports>3.1.5</extentreports>
+
+		<!-- Selenium properties -->
+		<selenium.version>3.141.59</selenium.version>
+
+		<!-- PDF properties -->
+		<pdfbox.version>2.0.14</pdfbox.version>
+
+
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>${allure.testng}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.automatedowl</groupId>
+			<artifactId>allure-environment-writer</artifactId>
+			<version>${allure.environment.writer}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j-core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>${slf4j.jdk14}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreports}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>${pdfbox.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>0.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-configuration2</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/testrunners/${suiteXmlFile}</suiteXmlFile>
+					</suiteXmlFiles>
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver}/aspectjweaver-${aspectjweaver}.jar"
+					</argLine>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectjweaver}</version>
+					</dependency>
+
+				</dependencies>
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+
+				<configuration>
+					<source>${java-compliler.version}</source>
+					<target>${java-compliler.version}</target>
+				</configuration>
+
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+
+</project>

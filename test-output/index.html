@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-_TEST_SUITE">
+              <span class="suite-name border-passed"> TEST SUITE</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-_TEST_SUITE">
+                    <span>D:\CodeBase\AutoHealer2\src\test\resources\web.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-_TEST_SUITE">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-_TEST_SUITE">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-_TEST_SUITE">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-_TEST_SUITE">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-_TEST_SUITE">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-_TEST_SUITE">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-_TEST_SUITE" class="hide-methods passed suite-_TEST_SUITE"> (hide)</a> <!-- hide-methods passed suite-_TEST_SUITE -->
+                      <a href="#" panel-name="suite-_TEST_SUITE" class="show-methods passed suite-_TEST_SUITE"> (show)</a> <!-- show-methods passed suite-_TEST_SUITE -->
+                    </span>
+                    <div class="method-list-content passed suite-_TEST_SUITE">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-_TEST_SUITE" title="org.GL.client.UI.tests.SearchTests" hash-for-method="searchTest(email)">searchTest(email)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-_TEST_SUITE -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-_TEST_SUITE" class="panel _TEST_SUITE">
+          <div class="suite-_TEST_SUITE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.GL.client.UI.tests.SearchTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchTest(email)">
+                  </a> <!-- searchTest(email) -->
+                  <span class="method-name">searchTest</span>
+                  <span class="parameters">(email)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-_TEST_SUITE-class-passed -->
+        </div> <!-- panel _TEST_SUITE -->
+        <div panel-name="test-xml-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\CodeBase\AutoHealer2\src\test\resources\web.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot; TEST SUITE&quot;&gt;
+  &lt;parameter name=&quot;parallelRun&quot; value=&quot;false&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.GL.client.UI.core.ParallelRunListners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;1&quot; verbose=&quot;2&quot; name=&quot;Chrome Test&quot;&gt;
+    &lt;parameter name=&quot;environmentName&quot; value=&quot;PreProduction&quot;/&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;text&quot; value=&quot;email&quot;/&gt;
+    &lt;parameter name=&quot;performanceFlag&quot; value=&quot;true&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;test&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;org.GL.client.*&quot;/&gt;
+    &lt;/packages&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.GL.client.UI.pages.HomePage&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.tests.SearchTests&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.tools.Config$UserDetails&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.tools.Config&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.CommonUtils$1&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.CommonUtils$2&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.CommonUtils&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.Constants$LocatorStrategy&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.Constants$ScrollDiection&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.Constants&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.FileUtil&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.CommonUtils.RandomGeneratorUtils&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.Performance.core.EventAttribute&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.Performance.core.NavigationTiming&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.Performance.core.PerformanceEvent&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.Performance.utils.EventListnerUtils&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.Performance.utils.PerformanceMatrix$1&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.Performance.utils.PerformanceMatrix&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.core.BaseTest&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.core.DriverFactory&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.core.DriverManager&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.core.ListenerService&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.core.Log&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.core.ParallelRunListners&quot;/&gt;
+      &lt;class name=&quot;org.GL.client.UI.utils.WebUtils&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Chrome Test --&gt;
+&lt;/suite&gt; &lt;!--  TEST SUITE --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for  TEST SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Chrome Test (25 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for  TEST SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">test</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">searchTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for  TEST SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData__TEST_SUITE');
+function tableData__TEST_SUITE() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'searchTest')
+data.setCell(0, 2, 'org.GL.client.UI.tests.SearchTests')
+data.setCell(0, 3, 3905);
+window.suiteTableData['_TEST_SUITE']= { tableData: data, tableDiv: 'times-div-_TEST_SUITE'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <div id="times-div-_TEST_SUITE">
+              </div> <!-- times-div-_TEST_SUITE -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for  TEST SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-_TEST_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.GL.client.UI.core.BaseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">envSetUp(Chrome, PreProduction, true)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.GL.client.UI.tests.SearchTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initClass</span>
+                <span class="method-start">12551 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">searchTest(email)</span>
+                <span class="method-start">12573 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.GL.client.UI.core.BaseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">16542 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
