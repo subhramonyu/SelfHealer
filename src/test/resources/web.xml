@@ -11,7 +11,7 @@
 
 		<parameter name="browserName" value="Chrome" />
 		<parameter name="environmentName" value="PreProduction" />
-		<parameter name="performanceFlag" value="true" />
+		<parameter name="performanceFlag" value="false" />
 		<parameter name="text" value="email" />
 		<groups>
 			<run>
@@ -19,7 +19,7 @@
 			</run>
 		</groups>
 		<packages>
-			<package name="org.GL.client.*" />
+			<package name="org.client.*" />
 		</packages>
 
 	</test>
@@ -31,7 +31,7 @@
 		<packages> <package name="org.GL.client.*" /> </packages> </test> -->
 
 	<listeners>
-		<listener class-name="org.GL.client.UI.core.ParallelRunListners" />
+		<listener class-name="org.client.UI.core.ParallelRunListners" />
 	</listeners>
 
 </suite>
