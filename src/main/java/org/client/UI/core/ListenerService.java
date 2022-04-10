@@ -1,6 +1,6 @@
 package org.client.UI.core;
 
-import org.client.CommonUtils.Constants;
+import org.apache.log4j.Logger;
 import org.client.Performance.utils.PerformanceMatrix;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,9 +14,9 @@ import io.qameta.allure.Step;
 
 
 public class ListenerService extends TestListenerAdapter {
-	
+	private static Logger Log;
 	public ListenerService() {
-		Log.setLogger("ListenerUtils");
+		 Log = Logger.getLogger(ListenerService.class);
 	}
 	
 
@@ -83,7 +83,7 @@ public class ListenerService extends TestListenerAdapter {
 		Log.info("Failed Tests: " + context.getFailedTests().getAllMethods());
 		Log.info("Skipped Tests: " + context.getSkippedTests().getAllMethods());
 
-		PerformanceMatrix.setPerformanceAttribute(Constants.Performance_JsonFile+context.getName()+context.getStartDate().getTime()+".json");
+		//PerformanceMatrix.setPerformanceAttribute(Config.Performance_JsonFile+context.getName()+context.getStartDate().getTime()+".json");
 	}
 
 	

@@ -9,22 +9,20 @@ import org.client.Performance.core.NavigationTiming;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-
-
 public class PerformanceMatrix {
-	
-	private static JSONObject jsonObject;
+
 	private static JSONArray jsonList;
-	
+
 	public static ThreadLocal<HashMap<String, JSONArray>> mapthread = new ThreadLocal<HashMap<String, JSONArray>>() {
-	    @Override
-	    protected HashMap<String, JSONArray> initialValue() {
-	        return new HashMap<>();
-	    }
+		@Override
+		protected HashMap<String, JSONArray> initialValue() {
+			return new HashMap<>();
+		}
 	};
-	
+
 	@SuppressWarnings("unchecked")
-	public static void getPerformanceAttribute(String EventName) {
+	public static  JSONArray getPerformanceAttribute() {
+		//HashMap<String, JSONArray> perfomMapTemp = new HashMap<String, JSONArray>();
 		HashMap<String, Long> performanceMatrix = NavigationTiming.loadData();
 		jsonList = new JSONArray();
 		for (String eventName : performanceMatrix.keySet()) {
@@ -32,14 +30,15 @@ public class PerformanceMatrix {
 			JObject.put(eventName, performanceMatrix.get(eventName));
 			jsonList.add(JObject);
 		}
-		
-		mapthread.get().put(EventName, jsonList);	
+
+		//perfomMapTemp.put(EventName, jsonList);
+		return jsonList;
 
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public static void setPerformanceAttribute(String JSONfilePath) {
-		 jsonList = new JSONArray();
+		jsonList = new JSONArray();
 		jsonList.add(mapthread.get());
 
 		try {
@@ -65,6 +64,5 @@ public class PerformanceMatrix {
 			e.printStackTrace();
 		}
 	}
-
 
 }

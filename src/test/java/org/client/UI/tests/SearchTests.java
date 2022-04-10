@@ -1,7 +1,8 @@
 package org.client.UI.tests;
 
+import org.client.UI.core.BaseTest;
 import org.client.UI.pages.HomePage;
-import org.client.UI.tools.Config;
+import org.client.UI.utils.TestGroup;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -19,18 +20,18 @@ import io.qameta.allure.Story;
 @Feature("Home Page")
 
 
-public class SearchTests {
+public class SearchTests extends BaseTest {
 	private HomePage home;
 
 	
-	@BeforeClass(groups = { Config.TEST})
+	@BeforeClass(groups = { TestGroup.TEST})
 	public void initClass() {
 		home = new HomePage();
 	}
 	
 	
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(groups = {Config.TEST }, priority = 0001)
+	@Test(groups = {TestGroup.TEST }, priority = 0001)
 	@Parameters({"text"})
 	@Description("Searching the text Gmail")
 	public void searchTest(String text) throws Exception {

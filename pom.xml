@@ -43,6 +43,12 @@
 
 		<!-- Selenium properties -->
 		<selenium.version>3.141.59</selenium.version>
+		
+		<!-- Helenium Properties -->
+		<helenium.version>3.2.4</helenium.version>
+
+		<!-- WebDriver manager Properties -->
+		<webdrivermanager.version>5.0.3</webdrivermanager.version>
 
 		<!-- PDF properties -->
 		<pdfbox.version>2.0.14</pdfbox.version>
@@ -56,6 +62,12 @@
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>${selenium.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.epam.healenium</groupId>
+			<artifactId>healenium-web</artifactId>
+			<version>${helenium.version}</version>
 		</dependency>
 
 		<dependency>
@@ -92,6 +104,13 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>${slf4j.jdk14}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 
@@ -153,7 +172,8 @@
 
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testrunners/${suiteXmlFile}</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testrunners/${suiteXmlFile}
+						</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver}/aspectjweaver-${aspectjweaver}.jar"

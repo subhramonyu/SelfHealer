@@ -1,17 +1,24 @@
-package org.client.CommonUtils;
+package org.client.UI.core;
 
-public class Constants 
+import org.client.CoreUtils.CommonUtils;
+import org.client.CoreUtils.FileUtil;
+
+public class Config 
 {
 	
-
+	// **** driver name constants ****
+    final public static String WEB_DRIVER = "Web";
 	
 	// **** driver  name constants **** 
-	final public static String CHROME_DRIVER = "Chrome";
-	final public static String FIREFOX_DRIVER = "Firefox";
-	final public static String IE_DRIVER = "InternetExploler";
-	final public static String SAFARI_DRIVER = "Safari";
+	final public static String CHROME = "Chrome";
+	final public static String FIREFOX = "Firefox";
+	final public static String IE = "InternetExploler";
+	final public static String SAFARI = "Safari";
+	final public static String OPERA = "Opera";
 	
-
+	 // **** environment name constants *****
+    final public static String PRODUCTION = "Production";
+    final public static String DEVELOPMENT = "Dev";
 	
 	
 	// ****** Time out Constant **********
@@ -20,13 +27,18 @@ public class Constants
 	
 
 	
+	
+	
 	// *********** file path **************
 	public final static String DRIVER_PATH = CommonUtils.getUserCurrentDirectoryPath()+"/drivers";
 	public final static String DEFAULT_DOWNLOAD_PATH = CommonUtils.getUserCurrentDirectoryPath()+"/Downloads";
-	public final static String Env_Property = CommonUtils.getUserCurrentDirectoryPath()+"/src/main/resources/PropertiesFiles/Environment.properties";
-	public final static String Performance_JsonFile = CommonUtils.getUserCurrentDirectoryPath()+"/files/PerformanceMatix/performancematric";
+	public final static String Env_Property = CommonUtils.getUserCurrentDirectoryPath()+"/src/main/resources/Environment.properties";
+	public final static String Performance_JsonFile = CommonUtils.getUserCurrentDirectoryPath()+"/files/PerformanceLogs/LatestPerfMatric.json";
 	public final static String UILogs = CommonUtils.getUserCurrentDirectoryPath()+"/files/UILogs/";
 	
+	
+	
+	public static final int MIN_BROWSER_WIDTH = Integer.parseInt(FileUtil.readFromPropertyFile(Env_Property,"minimum.browser.width"));
 	public enum LocatorStrategy
 	{
 

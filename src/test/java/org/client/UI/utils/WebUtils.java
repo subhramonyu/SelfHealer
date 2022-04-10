@@ -1,7 +1,7 @@
 package org.client.UI.utils;
 
-import org.client.CommonUtils.Constants.ScrollDiection;
 import org.client.UI.core.DriverManager;
+import org.client.UI.core.Config.ScrollDiection;
 
 public class WebUtils 
 {

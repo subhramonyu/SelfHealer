@@ -1,37 +1,50 @@
 package org.client.UI.core;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 public class DriverManager {
-	private static ThreadLocal<EventFiringWebDriver> driver = new ThreadLocal<EventFiringWebDriver>();
-
-	// private static ThreadLocal<Log> log = new ThreadLocal<Log>();
-	
-
-	private static DriverManager instance = null;
-
-	private DriverManager() {
-
-	}
-
-	public static DriverManager getInstance() {
-		if (instance == null) {
-			instance = new DriverManager();
-		}
-		return instance;
-	}
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	private static ThreadLocal<String> driverName = new ThreadLocal<>();
+	private static ThreadLocal<String> userName = new ThreadLocal<>();
+	private static ThreadLocal<String> password = new ThreadLocal<>();
 
 	public static WebDriver getDriver() {
 		return driver.get();
 	}
 
-	public static void setDriver(EventFiringWebDriver webdriver) {
+	public static void setDriver(WebDriver webdriver) {
 		driver.set(webdriver);
 	}
 
-	// public static ThreadLocal<Log> getLog() { return log; }
+	public static String getDriverName() {
+		return driverName.get();
+	}
 
-	// public static void setLog(Log logObject) { log.set(logObject); }
+	public static void setDriverName(String name) {
+		driverName.set(name);
+	}
+
+	public static String getUserName() {
+		return userName.get();
+	}
+
+	public static void setUserName(String userNameValue) {
+		userName.set(userNameValue);
+	}
+
+	public static String getPassword() {
+		return password.get();
+	}
+
+	public static void setPassword(String passwordValue) {
+		password.set(passwordValue);
+	}
+
+	public static void clearContext() {
+		driver.set(null);
+		driverName.set(null);
+		userName.set(null);
+		password.set(null);
+	}
 
 }

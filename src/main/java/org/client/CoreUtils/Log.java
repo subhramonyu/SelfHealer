@@ -1,11 +1,10 @@
-package org.client.UI.core;
+/*package org.client.CoreUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.client.CommonUtils.CommonUtils;
 
 public class Log {
 	
@@ -20,7 +19,7 @@ public class Log {
 	private static Logger Log;
 			public static Logger setLogger(String ClassName) {
 				PropertyConfigurator.configure(CommonUtils.getUserCurrentDirectoryPath()+"/src/main/resources/PropertiesFiles/Log.properties");
-				return  Log = Logger.getLogger(ClassName.getClass());
+				return  Log = Logger.getLogger(ClassName.getClass().getName());
 				
 			}
 		
@@ -54,4 +53,4 @@ public class Log {
 
 			}
 
-		}
+		}*/

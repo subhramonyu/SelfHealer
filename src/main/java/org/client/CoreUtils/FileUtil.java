@@ -1,4 +1,4 @@
-package org.client.CommonUtils;
+package org.client.CoreUtils;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -18,6 +18,7 @@ import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
 import org.client.Performance.core.NavigationTiming;
+import org.client.Performance.utils.PerformanceMatrix;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -31,6 +32,8 @@ public class FileUtil {
 	private static Parameters parameters;
 	private static FileBasedConfigurationBuilder<FileBasedConfiguration> builder;
 	private static Configuration configuration;
+	private static JSONObject jsonObject;
+	private static JSONArray jsonList;
 	
 
 	public static void writeToPropertyFile(String propertyFilePath, String propertyName, String propertyValue) {
@@ -110,6 +113,44 @@ public class FileUtil {
 			initPropertiesFile(fileName);
 			configuration.setProperty(propertyName, propertyValue);
 			builder.save();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static void writePerformanceAttributeToJSON(String EventName, String JSONfilePath) {
+		HashMap<String, Long> performanceMatrix = NavigationTiming.loadData();
+		jsonList = new JSONArray();
+		for (String eventName : performanceMatrix.keySet()) {
+			JSONObject JObject = new JSONObject();
+			JObject.put(eventName, performanceMatrix.get(eventName));
+			jsonList.add(JObject);
+		}
+		
+		jsonObject =  new JSONObject();
+		
+		jsonObject.put(EventName, jsonList);
+
+		try {
+			String jsoncontent = jsonObject.toJSONString();
+
+			File file = new File(JSONfilePath);
+
+			if (!(file.exists())) {
+				file.createNewFile();
+			}
+			FileWriter writer = new FileWriter(file,true);
+			PrintWriter printer = new PrintWriter(writer);
+			if (file.exists() && file.isFile()) {
+				printer.println(jsoncontent);
+				printer.flush();
+				writer.flush();
+				printer.close();
+				writer.close();
+			} else {
+				System.out.println("Please provide a valid path to desitnation Jsonfile");
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
