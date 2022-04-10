@@ -1,4 +1,4 @@
-package org.client.UI.tools;
+package org.client.CoreUtils;
 /*
  * package org.GL.client.config;
  * 

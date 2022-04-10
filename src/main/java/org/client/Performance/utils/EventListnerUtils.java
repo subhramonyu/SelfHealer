@@ -1,8 +1,9 @@
 package org.client.Performance.utils;
 
-import org.client.CommonUtils.FileUtil;
+import static org.client.CoreUtils.FileUtil.writePerformanceAttributeToJSON;
+
+import org.client.UI.core.Config;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,9 +43,10 @@ public class EventListnerUtils  implements WebDriverEventListener {
 
 	@Override
 	public void afterNavigateTo(String url, WebDriver driver) {
+		//PerformanceMatrix.getPerformanceAttribute(url.toString().trim());
 		// TODO Auto-generated method stub
 	
-		PerformanceMatrix.getPerformanceAttribute("Navigating to "+url.toString().trim());
+		writePerformanceAttributeToJSON("Navigating to "+url.toString().trim(),Config.Performance_JsonFile);
 	}
 	@Override
 	public void beforeNavigateBack(WebDriver driver) {
@@ -88,10 +90,6 @@ public class EventListnerUtils  implements WebDriverEventListener {
 
 	@Override
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		System.out.println("After find by :"+element.getAttribute("outerHTML"));
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		System.out.println("JS :" + js.executeScript("return arguments[0].attributes",element));
-		System.out.println("JS Attribute :" + js.executeScript("return arguments[0].getAttributeNames()",element));
 		
 		
 	}
@@ -105,7 +103,8 @@ public class EventListnerUtils  implements WebDriverEventListener {
 	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
 		// TODO Auto-generated method stub
-		PerformanceMatrix.getPerformanceAttribute(element.toString().split(": ")[2]);
+		//PerformanceMatrix.getPerformanceAttribute(element.toString().split(": ")[2]);
+		writePerformanceAttributeToJSON("Clicking On "+element.toString().split(": ")[2],Config.Performance_JsonFile);
 	}
 
 	@Override

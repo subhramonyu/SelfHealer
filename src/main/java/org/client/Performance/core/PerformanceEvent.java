@@ -1,14 +1,11 @@
 package org.client.Performance.core;
 
-import org.client.CommonUtils.CommonUtils;
+import org.client.CoreUtils.CommonUtils;
 import org.client.UI.core.DriverManager;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class PerformanceEvent extends CommonUtils {
-	private static JSONObject jsonObject;
-	private static JSONArray jsonList;
+	
 	
 	
 	public static long getPageLoadTIme() {

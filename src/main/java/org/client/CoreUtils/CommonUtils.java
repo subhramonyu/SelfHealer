@@ -1,4 +1,4 @@
-package org.client.CommonUtils;
+package org.client.CoreUtils;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -6,9 +6,10 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
-import org.client.CommonUtils.Constants.LocatorStrategy;
-import org.client.CommonUtils.Constants.ScrollDiection;
+import org.client.UI.core.Config;
 import org.client.UI.core.DriverManager;
+import org.client.UI.core.Config.LocatorStrategy;
+import org.client.UI.core.Config.ScrollDiection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -235,9 +236,9 @@ public class CommonUtils {
 	public static boolean isDisplayedAndEnabled(int timeoutInSeconds, int pollingTimeInSeconds, WebElement aNelement) {
 		try {
 			if (timeoutInSeconds == 0)
-				timeoutInSeconds = Constants.TIMEOUT_IN_SECONDS;
+				timeoutInSeconds = Config.TIMEOUT_IN_SECONDS;
 			if (pollingTimeInSeconds == 0)
-				pollingTimeInSeconds = Constants.POLLING_TIME_IN_SECONDS;
+				pollingTimeInSeconds = Config.POLLING_TIME_IN_SECONDS;
 			fluentWait = new FluentWait<WebDriver>(DriverManager.getDriver())
 					.pollingEvery(Duration.ofSeconds(pollingTimeInSeconds))
 					.withTimeout(Duration.ofSeconds(timeoutInSeconds))
@@ -259,7 +260,7 @@ public class CommonUtils {
 	@Step("Clicking on the WebElement : {0}")
 	public static void click(WebElement element) {
 		try {
-			if (isDisplayed(Constants.TIMEOUT_IN_SECONDS, Constants.POLLING_TIME_IN_SECONDS, element))
+			if (isDisplayed(Config.TIMEOUT_IN_SECONDS, Config.POLLING_TIME_IN_SECONDS, element))
 				element.click();
 		} catch (Throwable e) {
 			e.printStackTrace();
@@ -269,7 +270,7 @@ public class CommonUtils {
 	@Step("Clearing on the WebElement : {0}")
 	public static void clear(WebElement element) {
 		try {
-			if (isDisplayed(Constants.TIMEOUT_IN_SECONDS, Constants.POLLING_TIME_IN_SECONDS, element))
+			if (isDisplayed(Config.TIMEOUT_IN_SECONDS, Config.POLLING_TIME_IN_SECONDS, element))
 				element.clear();
 		} catch (Throwable e) {
 			e.printStackTrace();

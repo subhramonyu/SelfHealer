@@ -12,7 +12,9 @@
 		<parameter name="browserName" value="Chrome" />
 		<parameter name="environmentName" value="PreProduction" />
 		<parameter name="performanceFlag" value="false" />
+		<parameter name="isSelfHealing" value="true" />
 		<parameter name="text" value="email" />
+
 		<groups>
 			<run>
 				<include name="test" />
@@ -24,12 +26,21 @@
 
 	</test>
 
-	<!-- <test name="FIreFox Test" thread-count="1" verbose="2"> <parameter 
-		name="browserName" value="Firefox" /> <parameter name="environmentName" value="PreProduction" 
-		/> <parameter name="performanceFlag" value="false" /> <parameter name="text" 
-		value="gmail" /> <groups> <run> <include name="test" /> </run> </groups> 
-		<packages> <package name="org.GL.client.*" /> </packages> </test> -->
-
+	<!-- <test name="Opera Test" thread-count="1" verbose="2">
+		<parameter name="browserName" value="Opera" />
+		<parameter name="environmentName" value="PreProduction" />
+		<parameter name="performanceFlag" value="false" />
+		<parameter name="text" value="gmail" />
+		<groups>
+			<run>
+				<include name="test" />
+			</run>
+		</groups>
+		<packages>
+			<package name="org.client.*" />
+		</packages>
+	</test>
+ -->
 	<listeners>
 		<listener class-name="org.client.UI.core.ParallelRunListners" />
 	</listeners>
