@@ -5,8 +5,10 @@
 
 ## Build with
 [![Maven Central](https://img.shields.io/maven-central/v/com.epam.healenium/healenium-web.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.epam.healenium%22%20AND%20a:%22healenium-web%22)
-
 ![Java](https://img.shields.io/badge/Java-11-blue)
+![Selenium](https://img.shields.io/badge/Selenium-3.1-brightgreen)
+![TestNg](https://img.shields.io/badge/TestNg-7.3-yellowgreen)
+![RestAssured](https://img.shields.io/badge/RestAssured-3.3-lightgrey)
 
 
 
@@ -15,6 +17,7 @@
 + Auto healing capability to fix selenium based flaky test (implemented LCS for fininding locators ).  
 + UI Performance timings for Web Application (without any third party tool using google navigation API).
 + Control Test Parrallel run  from TestNg xml . 
++ API integration for beck end Test
 
 ## How To use
 
