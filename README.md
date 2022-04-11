@@ -6,7 +6,7 @@
 
 ##This Framework have 
 
-	###Auto healing capability to fix selenium based flaky test (implemented LCS for fininding locators ).
-	### UI Performance timings for Web Application (without any third party tool using google navigation API)
-	### Control Test Parrallel run  from TestNg xml . 
+###   Auto healing capability to fix selenium based flaky test (implemented LCS for fininding locators ).
+###   UI Performance timings for Web Application (without any third party tool using google navigation API)
+###   Control Test Parrallel run  from TestNg xml . 
 
