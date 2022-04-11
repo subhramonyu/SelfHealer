@@ -17,7 +17,7 @@
 ## How To use
 
 #### To enable Autohealing capability
-1.You must have docker installed in your system
-2.Go to infra folder in Project folder
+1.You must have docker installed in your system  
+2.Go to infra folder in Project folder  
 ![Image.PNG](Image.PNG)
 
