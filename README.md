@@ -1,14 +1,14 @@
 # AutoHealer2
  ![Developed By](https://img.shields.io/badge/Developed%20by-Subhramonyu%20Das-blue)
  ![GitHub repo size](https://img.shields.io/github/repo-size/subhramonyu/AutoHealer2)
- 
+ ![GitHub last commit](https://img.shields.io/github/last-commit/subhramonyu/AutoHealer2)
 
 ## Build with
 [![Maven Central](https://img.shields.io/maven-central/v/com.epam.healenium/healenium-web.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.epam.healenium%22%20AND%20a:%22healenium-web%22)
 ![Java](https://img.shields.io/badge/Java-11-blue)
-![Selenium](https://img.shields.io/badge/Selenium-3.1-brightgreen)
-![TestNg](https://img.shields.io/badge/TestNg-7.3-yellowgreen)
-![RestAssured](https://img.shields.io/badge/RestAssured-3.3-lightgrey)
+![Selenium](https://img.shields.io/badge/Selenium-3.1-blue)
+![TestNg](https://img.shields.io/badge/TestNg-7.3-blue)
+![RestAssured](https://img.shields.io/badge/RestAssured-3.3-blue)
 
 
 
