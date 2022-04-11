@@ -36,7 +36,7 @@ docker-compose up -d
 ```
 docker ps
 ```
-5.Now you are all set and remember after test completion just stop the all docker contaners by running the below command.  
+5. Now you are all set and remember after test completion just stop the all docker contaners by running the below command(only for local run).  
 Not required if you are running test on a server
 ```
 docker-compose stop
