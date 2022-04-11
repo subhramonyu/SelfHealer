@@ -1,14 +1,14 @@
 # AutoHealer2
  ![Developed By](https://img.shields.io/badge/Developed%20by-Subhramonyu%20Das-blue)
  ![GitHub repo size](https://img.shields.io/github/repo-size/subhramonyu/AutoHealer2)
- 
+ ![GitHub last commit](https://img.shields.io/github/last-commit/subhramonyu/AutoHealer2)
 
 ## Build with
 [![Maven Central](https://img.shields.io/maven-central/v/com.epam.healenium/healenium-web.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.epam.healenium%22%20AND%20a:%22healenium-web%22)
 ![Java](https://img.shields.io/badge/Java-11-blue)
-![Selenium](https://img.shields.io/badge/Selenium-3.1-brightgreen)
-![TestNg](https://img.shields.io/badge/TestNg-7.3-yellowgreen)
-![RestAssured](https://img.shields.io/badge/RestAssured-3.3-lightgrey)
+![Selenium](https://img.shields.io/badge/Selenium-3.1-blue)
+![TestNg](https://img.shields.io/badge/TestNg-7.3-blue)
+![RestAssured](https://img.shields.io/badge/RestAssured-3.3-blue)
 
 
 
@@ -24,5 +24,22 @@
 #### To enable Autohealing capability
 1.You must have docker installed in your system  
 2.Go to infra folder in Project folder  
+
 ![Image.PNG](Image.PNG)
+
+3.Open cmd/terminal and run below command
+
+```
+docker-compose up -d
+```  
+4. Verify that hlm-backend:latest and postgres docker containers are up and running:  
+```
+docker ps
+```
+5. Now you are all set and remember after test completion just stop the all docker contaners by running the below command(only for local run).  
+Not required if you are running test on a server
+```
+docker-compose stop
+```  
+
 
