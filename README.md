@@ -19,5 +19,5 @@
 #### To enable Autohealing capability
 1.You must have docker installed in your system
 2.Go to infra folder in Project folder
-![Image.png](img.png)
+![Image.PNG](Image.PNG)
 
