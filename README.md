@@ -24,5 +24,17 @@
 #### To enable Autohealing capability
 1.You must have docker installed in your system  
 2.Go to infra folder in Project folder  
+
 ![Image.PNG](Image.PNG)
+
+3.Open cmd/terminal and run below command
+
+```
+docker-compose up -d
+```  
+4. Verify that hlm-backend:latest and postgres docker containers are up and running:  
+```
+docker ps
+```
+
 
