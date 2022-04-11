@@ -1,1 +1,0 @@
-{"uuid":"9057511d-8f72-4cfc-adf4-c337a529155b","name":"org.GL.client.tests.SearchTests","children":["8c2aa663-c16b-4cdf-ba33-9bb2126ae8a2"],"befores":[{"name":"initClass","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1595691291353,"stop":1595691291355}],"afters":[],"links":[],"start":1595691291192,"stop":1595691291430}
