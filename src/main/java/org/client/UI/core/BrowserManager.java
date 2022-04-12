@@ -1,6 +1,6 @@
 package org.client.UI.core;
 
-import static org.client.UI.core.Config.MIN_BROWSER_WIDTH;
+import static org.client.UI.utils.Config.MIN_BROWSER_WIDTH;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import org.apache.log4j.Logger;
-import org.client.CoreUtils.AllureManager;
+import org.client.Factory.utils.AllureManager;
+import org.client.UI.utils.Config;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

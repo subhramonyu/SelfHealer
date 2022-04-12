@@ -1,10 +1,10 @@
 package org.client.Performance.core;
 
-import org.client.CoreUtils.CommonUtils;
+import org.client.Factory.utils.FactoryUtils;
 import org.client.UI.core.DriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 
-public class PerformanceEvent extends CommonUtils {
+public class PerformanceEvent extends FactoryUtils {
 	
 	
 	

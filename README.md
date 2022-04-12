@@ -12,7 +12,7 @@
 
 
 
-## This Famewaok have
+## This Famework have
 
 + Auto healing capability to fix selenium based flaky test (implemented LCS for fininding locators ).  
 + UI Performance timings for Web Application (without any third party tool using google navigation API).
