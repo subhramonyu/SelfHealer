@@ -35,7 +35,7 @@ public class SearchTests extends BaseTest {
 	@Parameters({"text"})
 	@Description("Searching the text Gmail")
 	public void searchTest(String text) throws Exception {
-		home.clickOnSearchBox();
+		home.enterEmail();
 		home.clickOnSearchBox(text);
 	}
 	

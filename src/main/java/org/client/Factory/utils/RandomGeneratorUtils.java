@@ -1,4 +1,4 @@
-package org.client.CoreUtils;
+package org.client.Factory.utils;
 
 import java.util.Random;
 

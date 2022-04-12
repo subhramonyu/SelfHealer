@@ -1,8 +1,10 @@
 package org.client.UI.core;
 
-import static org.client.CoreUtils.FileUtil.readFromPropertyFile;
+import static org.client.Factory.utils.FileUtil.readFromPropertyFile;
 
 import org.apache.log4j.Logger;
+import org.client.UI.utils.Config;
+import org.client.UI.utils.ListenerService;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;

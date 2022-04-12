@@ -172,7 +172,7 @@
 
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testrunners/${suiteXmlFile}
+						<suiteXmlFile>src/test/resources/${suiteXmlFile}
 						</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>
