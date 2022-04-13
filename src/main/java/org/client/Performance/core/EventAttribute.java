@@ -1,4 +1,4 @@
-package org.client.Performance.core;
+package org.client.performance.core;
 
 public enum EventAttribute {
 		

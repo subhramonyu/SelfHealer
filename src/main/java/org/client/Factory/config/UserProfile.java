@@ -1,4 +1,4 @@
-package org.client.Factory.config;
+package org.client.factory.config;
 
 import com.github.javafaker.Faker;
 

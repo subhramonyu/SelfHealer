@@ -1,11 +1,11 @@
-package org.client.Performance.config;
+package org.client.performance.config;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.HashMap;
 
-import org.client.Performance.core.NavigationTiming;
+import org.client.performance.core.NavigationTiming;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 

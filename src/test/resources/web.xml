@@ -4,11 +4,11 @@
 
 
 	<parameter name="parallelRun" value="false" />
+	
+
+
+	<!-- <test name="Chrome Test" thread-count="1" verbose="2">
 	<parameter name="isGUI" value="true" />
-
-
-	<test name="Chrome Test" thread-count="1" verbose="2">
-
 		<parameter name="browserName" value="Chrome" />
 		<parameter name="environmentName" value="PreProduction" />
 		<parameter name="performanceFlag" value="false" />
@@ -18,6 +18,24 @@
 		<groups>
 			<run>
 				<include name="test" />
+			</run>
+		</groups>
+		<packages>
+			<package name="org.client.*" />
+		</packages>
+
+	</test>
+	 -->
+	<test name="API Test" thread-count="1" verbose="2">
+	<parameter name="isGUI" value="false" />
+		<parameter name="environmentName" value="PreProduction" />
+		<parameter name="performanceFlag" value="false" />
+		<parameter name="isSelfHealing" value="true" />
+		<parameter name="name" value="email" />
+		<parameter name="job" value="SE" />
+		<groups>
+			<run>
+				<include name="api" />
 			</run>
 		</groups>
 		<packages>
@@ -42,7 +60,7 @@
 	</test>
  -->
 	<listeners>
-		<listener class-name="org.client.UI.core.ParallelRunListners" />
+		<listener class-name="org.client.ui.config.ParallelRunListners" />
 	</listeners>
 
 </suite>

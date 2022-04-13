@@ -1,11 +1,11 @@
-package org.client.UI.utils;
+package org.client.ui.utils;
 
 
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.client.UI.core.DriverManager;
+import org.client.ui.core.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;

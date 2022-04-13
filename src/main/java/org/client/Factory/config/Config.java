@@ -1,4 +1,4 @@
-package org.client.Factory.config;
+package org.client.factory.config;
 
 public class Config 
 {
@@ -35,7 +35,7 @@ public class Config
 	
 	
 	
-	public static final int MIN_BROWSER_WIDTH = Integer.parseInt(FileUtil.readFromPropertyFile(Env_Property,"minimum.browser.width"));
+	public static final int MIN_BROWSER_WIDTH = Integer.parseInt(FileUtil.getProperty(Env_Property,"minimum.browser.width"));
 	public enum LocatorStrategy
 	{
 

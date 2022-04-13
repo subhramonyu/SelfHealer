@@ -1,7 +1,7 @@
-package org.client.UI.core;
+package org.client.ui.core;
 
 import org.apache.log4j.Logger;
-import org.client.Performance.config.EventListnerUtils;
+import org.client.performance.config.EventListnerUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -14,7 +14,7 @@ public class DriverFactory {
 
 	private static Logger Log = Logger.getLogger(DriverFactory.class);
 
-	public final void driverInit(String browserName, String driver, String driverName, String userName, String password,
+	public final void driverInit(String browserName, String driverName, String userName, String password,
 			boolean performanceFlag, boolean isSelfHealing) throws Exception {
 
 		try {

@@ -1,4 +1,4 @@
-package org.client.UI.config;
+package org.client.ui.config;
 
 import java.util.List;
 
