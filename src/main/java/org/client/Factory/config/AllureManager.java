@@ -1,10 +1,10 @@
-package org.client.Factory.config;
+package org.client.factory.config;
 
 import java.util.Comparator;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
-import org.client.UI.core.DriverManager;
+import org.client.ui.core.DriverManager;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -13,13 +13,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap.Builder;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.model.Status;
 import io.qameta.allure.model.StepResult;
 import io.qameta.allure.util.ResultsUtils;
-
+import static org.client.factory.config.FileUtil.getProperty;
 public class AllureManager {
 
 	private AllureManager() {
@@ -31,25 +32,30 @@ public class AllureManager {
 		Log.info("Setting up Allure environment information");
 		Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
 
-		allureEnvironmentWriter(ImmutableMap.<String, String>builder().orderEntriesByValue(Comparator.naturalOrder())
+		allureEnvironmentWriter1(ImmutableMap.<String, String>builder().orderEntriesByValue(Comparator.naturalOrder())
 				.put("OS Name", System.getProperty("os.name")).put("OS Version", System.getProperty("os.version"))
 				.put("Browser Name", cap.getBrowserName()).put("Browser Version", cap.getVersion())
 				.put("Browser Dimension", dimension.getWidth() + " * " + dimension.getHeight()).build(),
 				System.getProperty("allure.results.directory") + "/");
 	}
 	
-	/*public static void setAllureEnvironment(WebDriver driver, Dimension dimension) {
+	public static void setAllureEnvironment() {
 		Log.info("Setting up Allure environment information");
-		Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+		
 
 		allureEnvironmentWriter(ImmutableMap.<String, String>builder().orderEntriesByValue(Comparator.naturalOrder())
-				.put("OS Name", System.getProperty("os.name")).put("OS Version", System.getProperty("os.version"))
-				.put("Browser Name", cap.getBrowserName()).put("Browser Version", cap.getVersion())
-				.put("Browser Dimension", dimension.getWidth() + " * " + dimension.getHeight()).build(),
+				.put("OS Name", System.getProperty("os.name"))
+				.put("OS Version", System.getProperty("os.version"))
+				.put("PROJECT", getProperty(Config.Env_Property, "PROJECT"))
+				.put("Environment", getProperty(Config.Env_Property, "ENV"))
+				.put("Release Version", getProperty(Config.Env_Property, "Release.version")),
 				System.getProperty("allure.results.directory") + "/");
-	}*/
+	}
+	private static void allureEnvironmentWriter(Builder<String, String> builder, String string) {
 
-	private static void allureEnvironmentWriter(ImmutableMap<String, String> build, String string) {
+	}
+
+	private static void allureEnvironmentWriter1(ImmutableMap<String, String> immutableMap, String string) {
 
 	}
 

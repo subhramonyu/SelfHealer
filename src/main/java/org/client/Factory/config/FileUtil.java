@@ -1,4 +1,4 @@
-package org.client.Factory.config;
+package org.client.factory.config;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,8 +17,7 @@ import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
-import org.client.Performance.config.PerformanceMatrix;
-import org.client.Performance.core.NavigationTiming;
+import org.client.performance.core.NavigationTiming;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -61,7 +60,7 @@ public class FileUtil {
 		}
 	}
 
-	public static String readFromPropertyFile(String propertyFilePath, String propertyName) {
+	public static String getProperty(String propertyFilePath, String propertyName) {
 		try {
 			properties.load(new FileInputStream(propertyFilePath));
 			return properties.getProperty(propertyName) != null ? properties.getProperty(propertyName).trim()

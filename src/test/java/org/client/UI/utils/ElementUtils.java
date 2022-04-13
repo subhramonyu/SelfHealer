@@ -1,13 +1,12 @@
-package org.client.UI.utils;
+package org.client.ui.utils;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-import org.client.UI.core.DriverManager;
-import org.client.Factory.config.FactoryUtils;
+import org.client.factory.config.FactoryUtils;
+import org.client.ui.core.DriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;

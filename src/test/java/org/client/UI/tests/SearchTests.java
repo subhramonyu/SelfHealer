@@ -1,8 +1,8 @@
-package org.client.UI.tests;
+package org.client.ui.tests;
 
-import org.client.UI.pages.HomePage;
-import org.client.UI.utils.TestGroup;
-import org.client.Factory.config.BaseTest;
+import org.client.ui.pages.HomePage;
+import org.client.ui.utils.TestGroup;
+import org.client.factory.config.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -37,6 +37,7 @@ public class SearchTests extends BaseTest {
 	public void searchTest(String text) throws Exception {
 		home.enterEmail();
 		home.clickOnSearchBox(text);
+		
 	}
 	
 	

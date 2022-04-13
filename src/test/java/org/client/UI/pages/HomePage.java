@@ -1,4 +1,4 @@
-package org.client.UI.pages;
+package org.client.ui.pages;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
