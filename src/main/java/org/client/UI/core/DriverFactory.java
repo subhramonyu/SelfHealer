@@ -1,7 +1,7 @@
 package org.client.UI.core;
 
 import org.apache.log4j.Logger;
-import org.client.Performance.utils.EventListnerUtils;
+import org.client.Performance.config.EventListnerUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 

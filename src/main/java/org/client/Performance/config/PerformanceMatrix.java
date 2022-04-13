@@ -1,4 +1,4 @@
-package org.client.Performance.utils;
+package org.client.Performance.config;
 
 import java.io.File;
 import java.io.FileWriter;

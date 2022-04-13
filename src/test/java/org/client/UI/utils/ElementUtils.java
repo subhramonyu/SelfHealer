@@ -3,8 +3,8 @@ package org.client.UI.utils;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-import org.client.Factory.utils.FactoryUtils;
 import org.client.UI.core.DriverManager;
+import org.client.Factory.config.FactoryUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;

@@ -1,7 +1,4 @@
-package org.client.UI.utils;
-
-import org.client.Factory.utils.FactoryUtils;
-import org.client.Factory.utils.FileUtil;
+package org.client.Factory.config;
 
 public class Config 
 {

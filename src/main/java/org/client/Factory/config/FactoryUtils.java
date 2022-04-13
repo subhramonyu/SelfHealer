@@ -1,4 +1,4 @@
-package org.client.Factory.utils;
+package org.client.Factory.config;
 
 import java.awt.Robot;
 import java.util.Arrays;

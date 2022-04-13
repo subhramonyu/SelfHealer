@@ -4,7 +4,7 @@
 
 
 	<parameter name="parallelRun" value="false" />
-
+	<parameter name="isGUI" value="true" />
 
 
 	<test name="Chrome Test" thread-count="1" verbose="2">

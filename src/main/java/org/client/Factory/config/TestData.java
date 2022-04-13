@@ -1,4 +1,4 @@
-package org.client.Factory.utils;
+package org.client.Factory.config;
 
 public class TestData {
 	private TestData() {

@@ -1,11 +1,13 @@
-package org.client.UI.core;
+package org.client.Factory.config;
 
-import static org.client.Factory.utils.FileUtil.readFromPropertyFile;
+import static org.client.Factory.config.FileUtil.readFromPropertyFile;
 
 import org.apache.log4j.Logger;
-import org.client.UI.utils.Config;
-import org.client.UI.utils.ListenerService;
+import org.client.UI.config.ListenerService;
+import org.client.UI.core.DriverFactory;
+import org.client.UI.core.DriverManager;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
@@ -15,12 +17,25 @@ import org.testng.annotations.Parameters;
 public class BaseTest extends DriverFactory{
 
 	private Logger Log = Logger.getLogger(BaseTest.class);
-
-	@BeforeTest(alwaysRun = true)
-
+	
+	@BeforeSuite(alwaysRun = true)
+	
 	@Parameters({ "browserName","URL","driver","driverName","userName","password", "environmentName", "performanceFlag","isSelfHealing" })
+	
+	public void envSetup(@Optional("true")boolean isGUI) {
+		if (!isGUI) {
+			
+		}
+		else {
+			//init();
+		}
+		
+	}
 
-	public void setUp(String browserName,
+	
+	
+@BeforeTest()
+	public void init(String browserName,
 			@Optional("") String URL,
 			@Optional String driver,
 			@Optional String driverName,

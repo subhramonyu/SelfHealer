@@ -1,7 +1,7 @@
 package org.client.Performance.core;
 
-import org.client.Factory.utils.FactoryUtils;
 import org.client.UI.core.DriverManager;
+import org.client.Factory.config.FactoryUtils;
 import org.openqa.selenium.JavascriptExecutor;
 
 public class PerformanceEvent extends FactoryUtils {

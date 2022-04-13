@@ -1,8 +1,8 @@
 package org.client.UI.tests;
 
-import org.client.UI.core.BaseTest;
 import org.client.UI.pages.HomePage;
 import org.client.UI.utils.TestGroup;
+import org.client.Factory.config.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

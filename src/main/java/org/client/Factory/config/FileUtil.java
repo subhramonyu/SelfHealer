@@ -1,4 +1,4 @@
-package org.client.Factory.utils;
+package org.client.Factory.config;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,8 +17,8 @@ import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
+import org.client.Performance.config.PerformanceMatrix;
 import org.client.Performance.core.NavigationTiming;
-import org.client.Performance.utils.PerformanceMatrix;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
