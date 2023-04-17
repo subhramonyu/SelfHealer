@@ -1,8 +1,7 @@
-package org.client.ui.config;
+package org.client.factory.core;
 
 import org.apache.log4j.Logger;
 import org.client.performance.config.PerformanceMatrix;
-import org.client.ui.core.DriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;

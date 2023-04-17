@@ -1,4 +1,4 @@
-package org.client.ui.core;
+package org.client.factory.core;
 
 import org.apache.log4j.Logger;
 import org.client.performance.config.EventListnerUtils;

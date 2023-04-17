@@ -1,12 +1,9 @@
-package org.client.factory.config;
+package org.client.factory.core;
 
-import static org.client.factory.config.FileUtil.getProperty;
-import static org.client.factory.config.AllureManager.setAllureEnvironment;
+import static org.client.factory.core.AllureManager.setAllureEnvironment;
+import static org.client.factory.utils.FileUtil.getProperty;
 
 import org.apache.log4j.Logger;
-import org.client.ui.config.ListenerService;
-import org.client.ui.core.DriverFactory;
-import org.client.ui.core.DriverManager;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;

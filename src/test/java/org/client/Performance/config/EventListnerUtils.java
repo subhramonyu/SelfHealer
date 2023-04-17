@@ -1,8 +1,8 @@
 package org.client.performance.config;
 
-import static org.client.factory.config.FileUtil.writePerformanceAttributeToJSON;
+import static org.client.factory.utils.FileUtil.writePerformanceAttributeToJSON;
 
-import org.client.factory.config.Config;
+import org.client.factory.core.Config;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;

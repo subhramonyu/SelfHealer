@@ -1,4 +1,4 @@
-package org.client.factory.config;
+package org.client.factory.core;
 /*package org.client.CoreUtils;
 
 import java.text.SimpleDateFormat;

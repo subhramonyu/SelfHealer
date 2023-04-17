@@ -3,8 +3,8 @@ package org.client.ui.utils;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
-import org.client.factory.config.FactoryUtils;
-import org.client.ui.core.DriverManager;
+import org.client.factory.core.DriverManager;
+import org.client.factory.utils.CommonUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -68,7 +68,7 @@ public class ElementUtils {
 		else if (scrollSteps > 0)
 			((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollBottom = arguments[1];",
 					parentElement, Math.abs(scrollSteps));
-		FactoryUtils.wait(2);
+		CommonUtils.wait(2);
 	}
 
 	public static boolean isElementSelected(WebElement element) {

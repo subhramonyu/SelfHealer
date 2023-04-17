@@ -1,4 +1,7 @@
-package org.client.factory.config;
+package org.client.factory.core;
+
+import org.client.factory.utils.CommonUtils;
+import org.client.factory.utils.FileUtil;
 
 public class Config 
 {
@@ -27,11 +30,11 @@ public class Config
 	
 	
 	// *********** file path **************
-	public final static String DRIVER_PATH = FactoryUtils.getUserCurrentDirectoryPath()+"/drivers";
-	public final static String DEFAULT_DOWNLOAD_PATH = FactoryUtils.getUserCurrentDirectoryPath()+"/Downloads";
-	public final static String Env_Property = FactoryUtils.getUserCurrentDirectoryPath()+"/src/main/resources/Environment.properties";
-	public final static String Performance_JsonFile = FactoryUtils.getUserCurrentDirectoryPath()+"/files/PerformanceLogs/LatestPerfMatric.json";
-	public final static String UILogs = FactoryUtils.getUserCurrentDirectoryPath()+"/files/UILogs/";
+	public final static String DRIVER_PATH = CommonUtils.getUserCurrentDirectoryPath()+"/drivers";
+	public final static String DEFAULT_DOWNLOAD_PATH = CommonUtils.getUserCurrentDirectoryPath()+"/Downloads";
+	public final static String Env_Property = CommonUtils.getUserCurrentDirectoryPath()+"/src/test/resources/Environment.properties";
+	public final static String Performance_JsonFile = CommonUtils.getUserCurrentDirectoryPath()+"/files/PerformanceLogs/LatestPerfMatric.json";
+	public final static String UILogs = CommonUtils.getUserCurrentDirectoryPath()+"/files/UILogs/";
 	
 	
 	

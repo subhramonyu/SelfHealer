@@ -1,4 +1,4 @@
-package org.client.factory.config;
+package org.client.factory.utils;
 
 import java.util.Random;
 

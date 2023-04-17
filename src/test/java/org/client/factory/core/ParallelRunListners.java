@@ -1,4 +1,4 @@
-package org.client.ui.config;
+package org.client.factory.core;
 
 import java.util.List;
 

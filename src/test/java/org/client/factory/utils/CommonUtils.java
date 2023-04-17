@@ -1,4 +1,4 @@
-package org.client.factory.config;
+package org.client.factory.utils;
 
 import java.awt.Robot;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Wait;
 import io.qameta.allure.Step;
 
 @SuppressWarnings({ "unused" })
-public class FactoryUtils {
+public class CommonUtils {
 	private static Process process;
 
 

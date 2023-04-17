@@ -1,7 +1,7 @@
 package org.client.ui.utils;
 
-import org.client.ui.core.DriverManager;
-import org.client.factory.config.TestData;
+import org.client.factory.core.DriverManager;
+import org.client.factory.utils.TestData;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;

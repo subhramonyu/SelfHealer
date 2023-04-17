@@ -1,10 +1,11 @@
-package org.client.factory.config;
+package org.client.factory.core;
+
+import static org.client.factory.utils.FileUtil.getProperty;
 
 import java.util.Comparator;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
-import org.client.ui.core.DriverManager;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -20,7 +21,6 @@ import io.qameta.allure.Attachment;
 import io.qameta.allure.model.Status;
 import io.qameta.allure.model.StepResult;
 import io.qameta.allure.util.ResultsUtils;
-import static org.client.factory.config.FileUtil.getProperty;
 public class AllureManager {
 
 	private AllureManager() {

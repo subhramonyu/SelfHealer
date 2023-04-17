@@ -1,4 +1,4 @@
-package org.client.ui.core;
+package org.client.factory.core;
 
 import org.openqa.selenium.WebDriver;
 

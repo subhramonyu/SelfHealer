@@ -1,6 +1,6 @@
 package org.client.api.test;
 
-import static org.client.factory.config.AllureManager.step;
+import static org.client.factory.core.AllureManager.step;
 
 import java.io.IOException;
 
