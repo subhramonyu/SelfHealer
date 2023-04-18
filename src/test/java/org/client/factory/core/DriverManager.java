@@ -7,7 +7,8 @@ public class DriverManager {
 	private static ThreadLocal<String> driverName = new ThreadLocal<>();
 	private static ThreadLocal<String> userName = new ThreadLocal<>();
 	private static ThreadLocal<String> password = new ThreadLocal<>();
-
+	private static ThreadLocal<Boolean> isHeadless = new ThreadLocal<>();
+	
 	public static WebDriver getDriver() {
 		return driver.get();
 	}
@@ -38,6 +39,14 @@ public class DriverManager {
 
 	public static void setPassword(String passwordValue) {
 		password.set(passwordValue);
+	}
+
+	public static boolean getIsHeadless() {
+		return isHeadless.get();
+	}
+
+	public static void setIsHeadless(boolean isHeadlessValue) {
+		isHeadless.set(isHeadlessValue);
 	}
 
 	public static void clearContext() {

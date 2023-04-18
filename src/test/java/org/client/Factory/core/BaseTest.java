@@ -18,24 +18,21 @@ public class BaseTest extends DriverFactory {
 	private Logger Log = Logger.getLogger(BaseTest.class);
 
 	@Parameters({ "isGUI", "browserName", "URL", "driverName", "userName", "password", "environmentName",
-			"performanceFlag", "isSelfHealing" })
+			"performanceFlag", "isSelfHealing" ,"checkBrowserDimension"})
 	@BeforeTest(alwaysRun = true)
 	public void init(@Optional("true") boolean isGUI, @Optional("Chrome")String browserName, @Optional("") String URL,
 			@Optional String driverName, @Optional String userName, @Optional String password,
 			@Optional("QA env") String environmentName, @Optional("false") boolean performanceFlag,
-			@Optional("false") boolean isSelfHealing) {
+			@Optional("false") boolean isSelfHealing , @Optional("false") boolean checkBrowserDimension) {
 		this.isGUI = isGUI;
+		setURL((!URL.isEmpty() ? this.URL : getProperty(Config.Env_Property, "BASEURL")));
 
 		try {
 			if (!isGUI) {
 				setAllureEnvironment();
-				setURL((!URL.isEmpty() ? this.URL : getProperty(Config.Env_Property, "BASEURL")));
 			} else {
-
-				driverInit(browserName, driverName, userName, password, performanceFlag, isSelfHealing);
-				setURL((!URL.isEmpty() ? this.URL : getProperty(Config.Env_Property, "BASEURL")));
+				driverInit(browserName, driverName, userName, password, performanceFlag, isSelfHealing,checkBrowserDimension);
 				driver.get(getURL());
-
 			}
 		}
 
