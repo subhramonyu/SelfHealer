@@ -14,17 +14,17 @@ public class DriverFactory {
 
 	private static Logger Log = Logger.getLogger(DriverFactory.class);
 
-	public final void driverInit(String browserName, String driverName, String userName, String password,
-			boolean performanceFlag, boolean isSelfHealing,boolean checkBrowserDimension) throws Exception {
+	public final void driverInit(String browserName, String userName, String password,
+			boolean performanceFlag, boolean isSelfHealing, boolean checkBrowserDimension, boolean isHeadless)
+			throws Exception {
 
 		try {
 
-			DriverFactory.driver = BrowserManager.getBrowser(browserName,checkBrowserDimension);
-			Log.info("Driver initialized sucessfully....");
-			DriverManager.setDriver(DriverFactory.driver);
-			DriverManager.setDriverName(driverName);
+			DriverManager.setDriverName(browserName);
 			DriverManager.setUserName(userName);
 			DriverManager.setPassword(password);
+			DriverManager.setIsHeadless(isHeadless);
+			DriverFactory.driver = BrowserManager.getBrowser(browserName, checkBrowserDimension);
 
 			if (performanceFlag) {
 				EventListnerUtils eventlistner = new EventListnerUtils();
@@ -35,10 +35,13 @@ public class DriverFactory {
 			}
 
 			if (isSelfHealing) {
-				SelfHealingDriver MLDriver = SelfHealingDriver.create(DriverFactory.driver); 
+				SelfHealingDriver MLDriver = SelfHealingDriver.create(DriverFactory.driver);
 				Log.info("Driver instantiated in SelfHealing mode....");
 				DriverManager.setDriver(MLDriver);
+			} else {
+				DriverManager.setDriver(DriverFactory.driver);
 			}
+			Log.info("Driver initialized sucessfully....");
 
 		} catch (Throwable e) {
 			Log.error("Driver initialization fails", e);
