@@ -9,7 +9,7 @@
 
 	<properties>
 		<!-- General properties -->
-		<java-compliler.version>1.8</java-compliler.version>
+		<java-compliler.version>11</java-compliler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<aspectjweaver>1.9.1</aspectjweaver>
 
