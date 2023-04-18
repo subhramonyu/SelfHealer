@@ -15,11 +15,11 @@ public class DriverFactory {
 	private static Logger Log = Logger.getLogger(DriverFactory.class);
 
 	public final void driverInit(String browserName, String driverName, String userName, String password,
-			boolean performanceFlag, boolean isSelfHealing) throws Exception {
+			boolean performanceFlag, boolean isSelfHealing,boolean checkBrowserDimension) throws Exception {
 
 		try {
 
-			DriverFactory.driver = BrowserManager.getBrowser(browserName);
+			DriverFactory.driver = BrowserManager.getBrowser(browserName,checkBrowserDimension);
 			Log.info("Driver initialized sucessfully....");
 			DriverManager.setDriver(DriverFactory.driver);
 			DriverManager.setDriverName(driverName);

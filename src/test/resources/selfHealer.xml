@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite  name="SELF HEALER TEST SUITE">
+<suite name="SELF HEALER TEST SUITE">
 
-
-	<parameter name="parallelRun" value="false" />
-
-
-	<test name="Chrome Test" thread-count="1" verbose="2">
+	<test name="Chrome Test">
 		<parameter name="isGUI" value="true" />
 		<parameter name="browserName" value="Chrome" />
 		<parameter name="isSelfHealing" value="true" />
