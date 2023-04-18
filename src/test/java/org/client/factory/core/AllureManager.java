@@ -4,6 +4,7 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
+import java.util.UUID;
 
 import org.codehaus.plexus.util.StringUtils;
 import org.openqa.selenium.Capabilities;
@@ -19,7 +20,11 @@ import com.google.common.collect.ImmutableMap;
 
 import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.model.Status;
+import io.qameta.allure.model.StepResult;
+import io.qameta.allure.util.ResultsUtils;
 
 public class AllureManager {
 
