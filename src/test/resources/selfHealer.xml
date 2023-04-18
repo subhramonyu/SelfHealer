@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SELF HEALER TEST SUITE">
+<suite  name="SELF HEALER TEST SUITE">
 
 	<test name="Chrome Test">
-		<parameter name="isGUI" value="true" />
-		<parameter name="browserName" value="Chrome" />
+	
+		<parameter name="URL" value="http://localhost:3000/" />
 		<parameter name="isSelfHealing" value="true" />
-		<parameter name="text" value="email" />
+		<parameter name="operation" value="add" />
+		<parameter name="num1" value="2" />
+		<parameter name="num2" value="8" />
+		
 
-		<groups>
-			<run>
-				<include name="test" />
-			</run>
-		</groups>
-		<packages>
-			<package name="org.client.*" />
-		</packages>
+			<groups>
+				<run>
+					<include name="calculatorTest" />
+				</run>
+			</groups>
+			<packages>
+				<package name="org.client.*" />
+			</packages>
 
 	</test>
 
