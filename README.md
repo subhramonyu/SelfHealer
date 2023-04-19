@@ -1,6 +1,7 @@
 # Selfhealer
  ![Developed By](https://img.shields.io/badge/Developed%20by-Subhramonyu%20Das-blue)
  ![GitHub repo size](https://img.shields.io/github/repo-size/subhramonyu/AutoHealer2)
+ <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github.com/subhramonyu/Selfhealer">
  ![GitHub last commit](https://img.shields.io/github/last-commit/subhramonyu/AutoHealer2)
 
 ## Build with
