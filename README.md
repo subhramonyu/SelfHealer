@@ -3,7 +3,7 @@
  ![GitHub repo size](https://img.shields.io/github/repo-size/subhramonyu/AutoHealer2)
  <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github.com/subhramonyu/Selfhealer">
  ![GitHub last commit](https:last modifiedds.io/github/last-commit/subhramonyu/AutoHealer2)
- ![GitHub last modified](https://img.shields.io/github/aur/last-modified/subhramonyu/AutoHealer2)
+ ![GitHub last modified](https://img.shields.io/github/last-modified/subhramonyu/AutoHealer2)
 
 
 ## Build with
