@@ -1,10 +1,9 @@
 # Selfhealer
  ![Developed By](https://img.shields.io/badge/Developed%20by-Subhramonyu%20Das-blue)
  ![GitHub repo size](https://img.shields.io/github/repo-size/subhramonyu/AutoHealer2)
- <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github.com/subhramonyu/Selfhealer">
- ![GitHub last commit](https:last modifiedds.io/github/last-commit/subhramonyu/AutoHealer2)
- ![master](https://img.shields.io/github/last-commit/badges/shields/master)
-
+ ![GitHub last commit](https://img.shields.io/github/last-commit/subhramonyu/AutoHealer2)
+ ![GitHub Lines of code](https://img.shields.io/tokei/lines/github.com/subhramonyu/Selfhealer)
+ ![GitHub](https://img.shields.io/github/license/subhramonyu/SelfHealer)
 
 ## Build with
 [![Maven Central](https://img.shields.io/maven-central/v/com.epam.healenium/healenium-web.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.epam.healenium%22%20AND%20a:%22healenium-web%22)
@@ -23,7 +22,6 @@
 + API integration for beck end Test
 
 ## How To use
-
 
 #### To enable Autohealing capability
 1.You must have docker installed in your system  
