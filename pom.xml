@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.client</groupId>
 	<artifactId>AutoHelaer2</artifactId>
@@ -43,7 +41,7 @@
 
 		<!-- Selenium properties -->
 		<selenium.version>3.141.59</selenium.version>
-		
+
 		<!-- Helenium Properties -->
 		<helenium.version>3.2.4</helenium.version>
 
@@ -139,7 +137,7 @@
 			<artifactId>javafaker</artifactId>
 			<version>0.12</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -153,7 +151,7 @@
 			<version>${json.schema.validator}</version>
 		</dependency>
 
-		
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -170,13 +168,21 @@
 			<artifactId>json-path</artifactId>
 			<version>${json.path}</version>
 		</dependency>
-		
+
 
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.15.4</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
